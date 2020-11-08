@@ -1,0 +1,23 @@
+<h1 class="ui center aligned header ">Welcome to MessageMe - a complete chat app </h1>
+<h2 class="ui center aligned icon header">
+  <i class="circular power icon  orange"></i>
+  Sign up
+</h2>
+
+<div class="ui card fluid raised ">
+  <div class="content">
+
+    <%= form_with( model: @user, class: "ui form" ,  local: true) do |f| %>
+      <div class="field">
+        <%= f.label :username  %>
+        <%= f.text_field :username , placeholder: "Enter a username "%>
+      </div>
+      <div class="field">
+        <%= f.label :password  %>
+        <%= f.password_field :password, placeholder: "Enter your password "%>
+      </div>
+      <%= f.submit "Sign up", class: "ui button" %>
+    <% end %>
+
+  </div>
+</div>
